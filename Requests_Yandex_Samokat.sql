@@ -1,4 +1,4 @@
-SELECT login, "Orders"."inDelivery" 
+SELECT login, COUNT("Orders"."inDelivery") 
 FROM "Couriers" 
 INNER JOIN "Orders" ON "Orders"."courierId" = "Couriers".id 
 WHERE "Orders"."inDelivery" = true;
